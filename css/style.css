@@ -1,0 +1,98 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+#navlogo {
+    float: right;
+}
+
+.nav {
+    float: right;
+}
+
+.nav > a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav > a:hover,
+.nav > a:active {
+    background-color: coral;
+}
+
+.nav > a:active {
+    background-color: rgba(255, 127, 80, 0.5);
+}
+
+
+
+.productos:hover{
+    background-color: #4CAF50;
+}
+
+.productos {
+    text-align: center;
+    width: 25%;
+}
+.productos > img {
+    margin: 0 auto 0 auto;
+    display:block;
+    width: 50%;
+}
+
+
+#f00 {
+    width: 100%;
+}
+
+
+.SeccionDeFooter {
+    max-width: 640px;
+}
+
+form {
+    height: 100%;
+}
+
+
+
+
+#totop {
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+#backtotop:a {
+    color: #666;
+    text-decoration: none;
+}
+
+#backtotop:visited,
+#backtotop:link {
+    color: #666;
+    text-decoration: none;
+}
+
+#backtotop:hover {
+    color: #666;
+    display:block;
+    background-color: coral;
+}
+
+#backtotop:active {
+    background-color: rgba(255, 127, 80, 0.5);
+}
+
+
