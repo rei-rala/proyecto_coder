@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
 nav > ul {
     list-style-type: none;
     margin: 0;
@@ -37,6 +46,9 @@ nav > ul {
 }
 
 
+main, section, footer {
+    margin-top: 2em;
+}
 
 .productos:hover{
     background-color: #4CAF50;
@@ -47,9 +59,13 @@ nav > ul {
     width: 25%;
 }
 .productos > img {
-    margin: 0 auto 0 auto;
+    margin: 0.5em auto 0.5em auto;
     display:block;
     width: 50%;
+}
+
+.caract_prod {
+    list-style-type: none;
 }
 
 
@@ -59,13 +75,82 @@ nav > ul {
 
 
 .SeccionDeFooter {
-    max-width: 640px;
+    max-width:1000px;
+    width: 33%;
+    padding: 0 2em 0 2em ;
+}
+
+.redes {
+    width: 30px;
 }
 
 form {
     height: 100%;
 }
 
+label {
+    margin-right: 0.5em;
+    margin-bottom: .25em;
+}
+
+textarea {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.campo_contacto {
+    padding: 0.5em 1px  0.5em 1px; 
+}
+
+textarea, .campo_contacto > input{
+    border:none;
+    border-radius: 5px;
+    background-color: gainsboro;
+}
+
+textarea:hover, textarea:focus,
+.campo_contacto > input:hover,
+.campo_contacto > input:focus,
+input[type=radius]:hover {
+    border:none;
+    border-radius: 5px;
+    background-color: rgba(216, 177, 78, 0.75);
+    transform: scale(1.05, 1.05)
+}
+
+
+.botones {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.botones > input {
+    width: 37%;
+    margin: 0 5% 10px 5%;
+    border-radius: 7px;
+}
+
+#confirma {
+    background-color: rgba(127, 255, 0, 1);
+}
+#confirma:hover {
+    background-color: rgba(127, 255, 0, 0.5);
+}
+#confirma:active {
+    transform: scale(1.2, 1.2);
+    font-weight: bold;
+}
+
+#resetea {
+    background-color: rgba(255, 112, 112, 1);
+}
+#resetea:hover {
+    background-color: rgba(255, 112, 112, 0.5);
+}
+#resetea:active {
+    transform: scale(1.2, 1.2);
+    font-weight: bold;
+}
 
 
 
@@ -94,5 +179,3 @@ form {
 #backtotop:active {
     background-color: rgba(255, 127, 80, 0.5);
 }
-
-
