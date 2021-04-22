@@ -11,6 +11,6 @@ Incorpora un formulario en la sección que corresponda para contacto. El mismo d
   
 Desafio 4 (entregado 17/04/2021):  
 
-+Consigna: crea un archivo CSS, y linkéalo al HTML entregado en el desafío de la clase anterior, esto es, “Primeros pasos con HTML Asigna color a títulos, párrafos y listas, mediante clases y etiquetas.
++Consigna: crea un archivo CSS, y linkéalo al HTML entregado en el desafío de la clase anterior, esto es, “Primeros pasos con HTML Asigna color a títulos, párrafos y listas, mediante clases y etiquetas.  
 +Aspectos a incluir en el entregable:
 Detalle completo acerca de lo que se espera que el estudiante entregue. Se sugiere detallar cada uno de los ítems.

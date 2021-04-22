@@ -46,26 +46,57 @@ nav > ul {
 }
 
 
-main, section, footer {
-    margin-top: 2em;
+main, section, footer, #prod {
+    margin: 1.5em 0.5em 0 0.5em;
+    border-spacing: 1em;
 }
 
-.productos:hover{
-    background-color: #4CAF50;
-}
 
 .productos {
     text-align: center;
     width: 25%;
+    border-radius: 7.5%;
+    border: hsla(122, 100%, 50%, 0.5);
+    padding: 0.5%;
+}
+.productos:hover{
+    background-color: hsla(122, 100%, 50%, 0.5);
+    border-color: whitesmoke;
+}
+.productos:hover > hr {
+    display: hide;
+}
+
+.productos > * {
+    margin: 1em auto 1em auto;
 }
 .productos > img {
-    margin: 0.5em auto 0.5em auto;
     display:block;
     width: 50%;
 }
 
 .caract_prod {
     list-style-type: none;
+}
+
+td > button {
+    width: 100px;
+    padding: 1%;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-color: rgba(127, 255, 0, 0.5);
+    color: black;
+    border-radius: 7.5%;
+}
+td > button:hover {
+    background-color: rgb(0, 182, 6,0.75);
+    border-color: white;
+    color: whitesmoke;
+}
+
+td > button:active {
+    background-color: rgba(245, 245, 245, 0.472);
+    border: 1px solid white;
+    color: white;
 }
 
 
@@ -75,7 +106,7 @@ main, section, footer {
 
 
 .SeccionDeFooter {
-    max-width:1000px;
+    /*max-width:1000px;*/
     width: 33%;
     padding: 0 2em 0 2em ;
 }
