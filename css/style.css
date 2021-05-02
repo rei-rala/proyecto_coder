@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
 *, body {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@ nav > ul {
 }
 
 #navlogo {
-    float: right;
+    float: left;
 }
 
 .nav {
@@ -34,6 +36,7 @@ nav > ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'New Tegomin', serif;
 }
 
 .nav > a:hover,
@@ -49,6 +52,7 @@ nav > ul {
 main, section, footer, #prod {
     margin: 1.5em 0.5em 0 0.5em;
     border-spacing: 1em;
+    z-index: 2;
 }
 
 
@@ -79,7 +83,7 @@ main, section, footer, #prod {
     list-style-type: none;
 }
 
-td > button {
+.btn_prod {
     width: 100px;
     padding: 1%;
     background-color: rgba(245, 245, 245, 0.5);
@@ -87,13 +91,13 @@ td > button {
     color: black;
     border-radius: 7.5%;
 }
-td > button:hover {
+.btn_prod:hover {
     background-color: rgb(0, 182, 6,0.75);
     border-color: white;
     color: whitesmoke;
 }
 
-td > button:active {
+.btn_prod:active {
     background-color: rgba(245, 245, 245, 0.472);
     border: 1px solid white;
     color: white;
@@ -109,6 +113,7 @@ td > button:active {
     /*max-width:1000px;*/
     width: 33%;
     padding: 0 2em 0 2em ;
+    z-index: -1;
 }
 
 .redes {
@@ -140,14 +145,14 @@ textarea, .campo_contacto > input{
     background-color: gainsboro;
 }
 
-textarea:hover, textarea:focus,
+textarea:hover, textarea:focus, textarea:active
 .campo_contacto > input:hover,
 .campo_contacto > input:focus,
 input[type=radius]:hover {
     border:none;
     border-radius: 5px;
     background-color: rgba(216, 177, 78, 0.75);
-    transform: scale(1.05, 1.05)
+    transform: scale(1.05, 1.05);
 }
 
 
@@ -183,30 +188,62 @@ input[type=radius]:hover {
     font-weight: bold;
 }
 
+.UP {
+    border: 1px dotted red;
+    border-radius: 50%;
+    height : 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 10%;
+    right: 7.5%;
+    transition: width 1s, height 1s;
+    z-index: 999;
+}
+
+.UP:hover {
+    border-color: greenyellow;
+    background-color: black;
+    height : 90px;
+    width: 90px;
+}
 
 
-#totop {
-    background-color: #f3f3f3;
+.UP_img {
+    width: 85%;
+    margin: 7.5% 7.5%;
+}
+
+
+#the_product {
     text-align: center;
+    align-items: center;
 }
 
-#backtotop:a {
+
+.others {
+    height: 1.5rem;
+}
+.other_products > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:   RED;
+}
+
+.other_products > ul > a {
     color: #666;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
+    font-family: 'New Tegomin', serif;
 }
 
-#backtotop:visited,
-#backtotop:link {
-    color: #666;
-    text-decoration: none;
-}
-
-#backtotop:hover {
-    color: #666;
-    display:block;
+.other_products > ul > a:hover,
+.other_products > ul > a:active {
     background-color: coral;
 }
 
-#backtotop:active {
+.other_products > ul > a:active {
     background-color: rgba(255, 127, 80, 0.5);
 }
