@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
-*, body {
+
+/* --------- GLOBALES --------- */
+body {
     margin: 0;
     padding: 0;
 }
@@ -14,33 +16,40 @@ a:hover {
     font-weight: bold;
 }
 
-nav > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+button:hover,
+#confirma:hover,
+#resetea:hover {
+    cursor: pointer;
+}
+/* ---------------------------- */
+nav {
+    background-color: antiquewhite;
+}
+
+nav *{
+    justify-content: space-around;
+    display: inline;
+    list-style: none;
     overflow: hidden;
-    background-color: #f3f3f3;
 }
 
-#navlogo {
-    float: left;
+#LOGO {
+    max-height: 50px;
 }
-
-.nav {
+#nav_hipervinculos {
     float: right;
 }
 
 .nav > a {
-    display: block;
     color: #666;
-    text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-family: 'New Tegomin', serif;
 }
 
 .nav > a:hover,
 .nav > a:active {
+    
+    padding: 14px 16px;
     background-color: coral;
 }
 
@@ -49,26 +58,38 @@ nav > ul {
 }
 
 
-main, section, footer, #prod {
+main, section, #prod {
     margin: 1.5em 0.5em 0 0.5em;
     border-spacing: 1em;
     z-index: 2;
 }
 
+footer > * {
+    text-align: center;
+    max-width: 99%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.SeccionDeFooter {
+    width: 33%;
+}
+
+.f3 {
+    justify-content: center;
+}
 
 .productos {
     text-align: center;
     width: 25%;
     border-radius: 7.5%;
-    border: hsla(122, 100%, 50%, 0.5);
     padding: 0.5%;
+    border: 2px solid hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 95%,0.5);
+    
 }
 .productos:hover{
-    background-color: hsla(122, 100%, 50%, 0.5);
-    border-color: whitesmoke;
-}
-.productos:hover > hr {
-    display: hide;
+    background-color: hsla(122, 100%, 50%, 0.25);
 }
 
 .productos > * {
@@ -76,7 +97,7 @@ main, section, footer, #prod {
 }
 .productos > img {
     display:block;
-    width: 50%;
+    max-width: 60%;
 }
 
 .caract_prod {
@@ -84,44 +105,32 @@ main, section, footer, #prod {
 }
 
 .btn_prod {
-    width: 100px;
+    width: 50%;
     padding: 1%;
     background-color: rgba(245, 245, 245, 0.5);
-    border-color: rgba(127, 255, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
     color: black;
-    border-radius: 7.5%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    transition: width 650ms, height 650ms;
 }
 .btn_prod:hover {
+    width: 70%;
+    border-radius: 15px;
     background-color: rgb(0, 182, 6,0.75);
-    border-color: white;
-    color: whitesmoke;
+    border-color: rgba(0, 0, 0, 0);
+    color: white;
 }
 
 .btn_prod:active {
     background-color: rgba(245, 245, 245, 0.472);
     border: 1px solid white;
-    color: white;
+    color: black;
 }
 
-
-#f00 {
-    width: 100%;
-}
-
-
-.SeccionDeFooter {
-    /*max-width:1000px;*/
-    width: 33%;
-    padding: 0 2em 0 2em ;
-    z-index: -1;
-}
 
 .redes {
     width: 30px;
-}
-
-form {
-    height: 100%;
 }
 
 label {
@@ -139,10 +148,16 @@ textarea {
     padding: 0.5em 1px  0.5em 1px; 
 }
 
+.genero {
+    text-align: center;
+}
+
+
 textarea, .campo_contacto > input{
     border:none;
     border-radius: 5px;
     background-color: gainsboro;
+    transition: width 0.15s, height 0.15s;
 }
 
 textarea:hover, textarea:focus, textarea:active
@@ -152,7 +167,7 @@ input[type=radius]:hover {
     border:none;
     border-radius: 5px;
     background-color: rgba(216, 177, 78, 0.75);
-    transform: scale(1.05, 1.05);
+    transform: scale(1.05)
 }
 
 
@@ -167,56 +182,24 @@ input[type=radius]:hover {
 }
 
 #confirma {
-    background-color: rgba(127, 255, 0, 1);
+    background-color: rgba(127, 255, 0);
+    transition: width 0.15s, height 0.35s;
+    position: static;
 }
-#confirma:hover {
-    background-color: rgba(127, 255, 0, 0.5);
-}
-#confirma:active {
-    transform: scale(1.2, 1.2);
-    font-weight: bold;
-}
-
 #resetea {
-    background-color: rgba(255, 112, 112, 1);
+    background-color: rgba(255, 112, 112);
+    transition: width 0.1s, height 0.35s;
+    position: static;
 }
-#resetea:hover {
-    background-color: rgba(255, 112, 112, 0.5);
+
+#confirma:hover, #resetea:hover {
+    opacity: 0.80;
+    width: 40%;
+    height: 1.6em;
+
 }
-#resetea:active {
-    transform: scale(1.2, 1.2);
+#confirma:active, #resetea:active {
     font-weight: bold;
-}
-
-.UP {
-    border: 1px dotted red;
-    border-radius: 50%;
-    height : 60px;
-    width: 60px;
-    position: fixed;
-    bottom: 10%;
-    right: 7.5%;
-    transition: width 1s, height 1s;
-    z-index: 999;
-}
-
-.UP:hover {
-    border-color: greenyellow;
-    background-color: black;
-    height : 90px;
-    width: 90px;
-}
-
-
-.UP_img {
-    width: 85%;
-    margin: 7.5% 7.5%;
-}
-
-
-#the_product {
-    text-align: center;
-    align-items: center;
 }
 
 
@@ -239,11 +222,40 @@ input[type=radius]:hover {
     font-family: 'New Tegomin', serif;
 }
 
-.other_products > ul > a:hover,
-.other_products > ul > a:active {
+.other_products > ul > a:hover, .other_products > ul > a:active {
     background-color: coral;
 }
 
 .other_products > ul > a:active {
     background-color: rgba(255, 127, 80, 0.5);
+}
+
+
+
+
+
+.UP {
+    border: 1.25px solid red;
+    border-radius: 50%;
+    height : 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 10%;
+    right: 7.5%;
+    transition: width 500ms, height 500ms;
+    background-color: gainsboro;
+    z-index: 9;
+}
+
+.UP:hover {
+    border-color: greenyellow;
+    background-color: rgba(216, 177, 78, 0.75);
+    height : 90px;
+    width: 90px;
+}
+
+
+.UP_img {
+    width: 85%;
+    margin: 7.5% 7.5%;
 }
