@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <link rel="stylesheet" href="css/style.css" />
 
   <title>Paperless by Rei-rala</title>
@@ -15,17 +15,17 @@
 
 
   <header>
-    
-    <nav>
+    <div class="isologo">
       <img id="LOGO" src="img/pc.png" alt="LOGO Paperless" />
       <p>P&Pr-</p>
-      <ul id='nav_hipervinculos'>
-        <li class="nav"><a href="#inicio">Inicio</a></li>
-        <li class="nav"><a href="#productos">Productos</a></li>
-        <li class="nav"><a href="#contacto">Contacto</a></li>
-      </ul>
+    </div>
+
+    <nav>
+      <a class="nav_link" href="#">Inicio</a>
+      <a class="nav_link" href="#seccion_productos">Productos</a>
+      <a class="nav_link" href="#contacto">Contacto</a>
     </nav>
-    
+
   </header>
 
 
@@ -69,7 +69,7 @@
     </p>
   </main>
 
-  <section id="productos">
+  <section id="seccion_productos">
     <h2>Productos</h2>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
@@ -77,146 +77,125 @@
       Fugit, alias libero facere earum non aliquam adipisci eius quisquam
       mollitia a.
     </p>
+    <section class="prod">
+      <div class="productos">
+        <h3>Producto 1</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Architecto, qui sit fuga tempora saepe numquam.
+        </p>
+        <ul class="caract_prod">
+          <li>Beneficio uno</li>
+          <li>Beneficio dos</li>
+          <li>Beneficio tres</li>
+        </ul>
+        <img src="img/pc.png" class="producto_imagen pr1" alt="Producto uno" />
+        <a href="productos/producto1.html"><button class="btn btn_prod">Detalles de p1</button></a>
+      </div>
 
-    <table id="prod">
-      <tr>
-        <td class="productos">
-          <h3>Producto 1</h3>
-          <hr />
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Architecto, qui sit fuga tempora saepe numquam.
-          </p>
+      <div class="productos">
+        <h3>Producto 2</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
+          minus voluptate sint, totam veniam cum nostrum!
+        </p>
+        <ul class="caract_prod">
+          <li>Beneficio uno</li>
+          <li>Beneficio dos</li>
+          <li>Beneficio tres</li>
+        </ul>
+        <img src="img/pc.png" class="producto_imagen pr2" alt="Producto dos" />
+        <a href="productos/producto2.html"><button class="btn btn_prod">Detalles de p2</button></a>
+      </div>
 
-          <ul class="caract_prod">
-            <li>Beneficio uno</li>
-            <li>Beneficio dos</li>
-            <li>Beneficio tres</li>
-          </ul>
-          <img src="img/pc.png" alt="Producto uno" />
-          <a href="productos/producto1.html"><button class="btn_prod">Detalles de p1</button></a>
-        </td>
+      <div class="productos">
+        <h3>Producto 3</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
+          accusantium aliquid distinctio quasi explicabo.
+        </p>
+        <ul class="caract_prod">
+          <li>Beneficio uno</li>
+          <li>Beneficio dos</li>
+          <li>Beneficio tres</li>
+        </ul>
+        <img src="img/pc.png" class="producto_imagen pr3" alt="Producto tres" />
+        <a href="productos/producto3.html"><button class="btn btn_prod">Detalles de p3</button></a>
+      </div>
 
-        <td class="productos">
-          <h3>Producto 2</h3>
-          <hr />
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
-            minus voluptate sint, totam veniam cum nostrum!
-          </p>
-
-          <ul class="caract_prod">
-            <li>Beneficio uno</li>
-            <li>Beneficio dos</li>
-            <li>Beneficio tres</li>
-          </ul>
-          <img src="img/pc.png" alt="Producto dos" />
-          <a href="productos/producto2.html"><button class="btn_prod">Detalles de p2</button></a>
-        </td>
-
-        <td class="productos">
-          <h3>Producto 3</h3>
-          <hr />
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-            accusantium aliquid distinctio quasi explicabo.
-          </p>
-
-          <ul class="caract_prod">
-            <li>Beneficio uno</li>
-            <li>Beneficio dos</li>
-            <li>Beneficio tres</li>
-          </ul>
-          <img src="img/pc.png" alt="Producto tres" />
-          <a href="productos/producto3.html"><button class="btn_prod">Detalles de p3</button></a>
-        </td>
-
-        <td class="productos">
-          <h3>Otro producto</h3>
-          <p>
-            Tenes una sugerencia? <a href="#lista_contacto">Contactenos!</a>
-          </p>
-          <img src="img/papers.png" alt="Producto cuatro" />
-        </td>
-      </tr>
-    </table>
+      <div class="productos">
+        <h3>Otro producto</h3>
+        <p>
+          Tenes una sugerencia? <br>
+          <a href="#lista_contacto">Contactenos!</a>
+        </p>
+        <img src="img/papers.png" class="producto_imagen prX" alt="Producto cuatro" />
+      </div>
+    </section>
   </section>
+
+
+  <footer id="contacto">
+    <div class="seccion_footer footer1">
+      <h3>Contactenos</h3>
+      <address>Calle Falsa 123, Ciudad Falsa</address>
+      <a href="mailto:mail@peiperSA@mail.com"></a>
+      <img src="img/redes/faceb.png" alt="Facebok" class="redes" /> <a href="#">Paperless </a><br />
+      <img src="img/redes/whats.png" alt="WhatsApp" class="redes" /> <a href="#">(+54) 11 2345 6789</a><br />
+      <img src="img/redes/instag.png" alt="Instagram" class="redes" /> <a href="#">@Paperless </a><br />
+      </ul>
+    </div>
+
+    <div class="seccion_footer footer2">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.7869596256296!2d-58.384229920921044!3d-34.60405721592027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1618672278076!5m2!1ses-419!2sar"
+        width="100%" height="250px" style="border: none" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="seccion_footer footer3">
+      
+      <form action="" id="contactar" >
+        <div class="grid">
+            <div class="nombre"><label for="nombre" >Nombre</label> </div>
+            <div class="input_nombre"> <input type="text" placeholder="Nombre" id="nombre" required /> </div>
+
+            <div class="mail"> <label for="email">E-Mail</label> </div>
+            <div class="input_mail"> <input type="email" placeholder="E-Mail" id="email" required /> </div>
+
+            <div class="genero"> <label>  Genero</label> </div>
+
+            <div class="input_masc"> <input type="radio" name="genero" id="masc" required /> </div>
+            <div class="masc"> <label for="masc">Masculino</label> </div>
+
+            <div class="input_fem"> <input type="radio" name="genero" id="fem" required /> </div>
+            <div class="fem"> <label for="fem">Femenino</label> </div>
+
+            <div class="input_oth"> <input type="radio" name="genero" id="otro" required /> </div>
+            <div class="otro"> <label id="label_otro" for="otro">Otro</label> </div>
+
+            <div class="interes"> <label for="interes">Interes en producto</label> </div>
+            <div class="dropdown_interes"> <select name="interes" id="interes"> 
+              <option value="ProductoOtro"> Otro producto o sugerencia </option>
+              <option value="Producto1">Producto 1</option>
+              <option value="Producto2">Producto 2</option>
+              <option value="Producto3">Producto 3</option>
+            </select> </div>
+
+            <div class="comentario"> <label for="coment">Comentarios</label> </div>
+            <div class="comentario_textarea"> <textarea name="" id="coment" cols="11" rows="5" maxlength="148" placeholder="Añadir un comentario..."></textarea> </div>
+
+            <div class="confirma" > <input id="confirma" type="submit" value="Enviar" /> </div>
+            <div class="resetea" > <input id="resetea" type="reset" value="Borrar" /> </div>
+          </div>
+      </form>
+    </div>
+  </footer>
+
 
   <div class="UP">
     <a href="#"><img class="UP_img" src="img/up.png" href="#" title="Ir arriba" alt="Ir arriba"></a>
   </div>
 
-  <footer>
-    <table>
-      <tr class="footer_sections">
-        <td class="SeccionDeFooter">
-          <h3>Contactenos</h3>
-          <address>Calle Falsa 123, Ciudad Falsa</address>
-          <a href="mailto:mail@peiperSA@mail.com"></a>
-          <img src="img/redes/faceb.png" alt="Facebok" class="redes" /> <a href="#">Paperless </a><br />
-          <img src="img/redes/whats.png" alt="WhatsApp" class="redes" /> <a href="#">(+54) 11 2345 6789</a><br />
-          <img src="img/redes/instag.png" alt="Instagram" class="redes" /> <a href="#">@Paperless </a><br />
-          </ul>
-        </td>
-        <td class="SeccionDeFooter">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.7869596256296!2d-58.384229920921044!3d-34.60405721592027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1618672278076!5m2!1ses-419!2sar"
-            width="400" height="320" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-        </td>
-        <td class="SeccionDeFooter f3">
-          <form action="">
-            <fieldset>
-              <legend>Llene el formulario para contactarnos</legend>
-
-              <div class="campo_contacto">
-                <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Nombre" id="nombre" required />
-              </div>
-
-              <div class="campo_contacto">
-                <label for="tel">Telefono</label>
-                <input type="text" placeholder="Telefono" id="tel" required/>
-              </div>
-
-              <div class="campo_contacto genero">
-                <label>Genero</label><br>
-                <input type="radio" name="genero" id="masc" required />
-                <label for="masc">Masculino</label><br>
-
-                <input type="radio" name="genero" id="fem" required />
-                <label for="fem">Femenino</label><br>
-
-                <input type="radio" name="genero" id="otro" required />
-                <label id="label_otro" for="otro">Otro</label><br>
-              </div>
-
-              <div class="campo_contacto">
-                <label for="interes">Interes en producto</label>
-                <select name="interes" id="interes">
-                  <option value="ProductoOtro">
-                    Otro producto o sugerencia
-                  </option>
-                  <option value="Producto1">Producto 1</option>
-                  <option value="Producto2">Producto 2</option>
-                  <option value="Producto3">Producto 3</option>
-                </select>
-              </div>
-
-              <div class="campo_contacto">
-                <label for="coment">Comentarios</label> <br />
-                <textarea name="" id="coment" cols="15" rows="4" maxlength="148" placeholder="Ingrese un comentario..."></textarea>
-              </div>
-
-              <div class="campo_contacto botones">
-                <input id="confirma" type="submit" value="Enviar" />
-                <input id="resetea" type="reset" value="Borrar" />
-              </div>
-            </fieldset>
-          </form>
-        </td>
-      </tr>
-    </table>
-  </footer>
 </body>
 
 </html>

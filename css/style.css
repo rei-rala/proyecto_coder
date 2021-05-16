@@ -16,95 +16,15 @@ a:hover {
     font-weight: bold;
 }
 
-button:hover,
-#confirma:hover,
-#resetea:hover {
-    cursor: pointer;
-}
-/* ---------------------------- */
-nav {
-    background-color: antiquewhite;
-}
-
-nav *{
-    justify-content: space-around;
-    display: inline;
-    list-style: none;
-    overflow: hidden;
-}
-
-#LOGO {
-    max-height: 50px;
-}
-#nav_hipervinculos {
-    float: right;
-}
-
-.nav > a {
-    color: #666;
-    padding: 14px 16px;
-    font-family: 'New Tegomin', serif;
-}
-
-.nav > a:hover,
-.nav > a:active {
-    
-    padding: 14px 16px;
-    background-color: coral;
-}
-
-.nav > a:active {
-    background-color: rgba(255, 127, 80, 0.5);
-}
-
-
-main, section, #prod {
-    margin: 1.5em 0.5em 0 0.5em;
-    border-spacing: 1em;
-    z-index: 2;
-}
-
-footer > * {
-    text-align: center;
-    max-width: 99%;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-}
-
-.SeccionDeFooter {
-    width: 33%;
-}
-
-.f3 {
-    justify-content: center;
-}
-
-.productos {
-    text-align: center;
-    width: 25%;
-    border-radius: 7.5%;
-    padding: 0.5%;
-    border: 2px solid hsl(0, 0%, 90%);
-    background-color: hsl(0, 0%, 95%,0.5);
-    
-}
-.productos:hover{
-    background-color: hsla(122, 100%, 50%, 0.25);
-}
-
-.productos > * {
-    margin: 1em auto 1em auto;
-}
-.productos > img {
-    display:block;
-    max-width: 60%;
-}
-
-.caract_prod {
+ul {
     list-style-type: none;
 }
 
-.btn_prod {
+button:hover, #confirma:hover, #resetea:hover {
+    cursor: pointer;
+}
+
+.btn {
     width: 50%;
     padding: 1%;
     background-color: rgba(245, 245, 245, 0.5);
@@ -114,95 +34,214 @@ footer > * {
     margin-bottom: 5%;
     transition: width 650ms, height 650ms;
 }
-.btn_prod:hover {
+.btn:hover {
     width: 70%;
-    border-radius: 15px;
     background-color: rgb(0, 182, 6,0.75);
-    border-color: rgba(0, 0, 0, 0);
     color: white;
 }
 
-.btn_prod:active {
+.btn:active {
     background-color: rgba(245, 245, 245, 0.472);
-    border: 1px solid white;
     color: black;
 }
 
+main, section {
+    margin: 1.5%;
+}
+footer {
+    margin-top: 1.5%;
+    padding: 0 1.5%;
+}
+/* ------- FIN GLOBALES -------- */
+
+
+
+/* ----------- header ----------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    overflow: hidden;
+    column-gap: 10px;
+}
+
+.isologo {
+    display: flex;
+    gap: 5%;
+}
+
+#LOGO {
+    max-height: 45px;
+}
+
+.vacio {
+    background-color: blue;
+}
+
+.nav_link {
+    color: #666;
+    padding: 14px 16px;
+    font-family: 'New Tegomin', serif;
+}
+.nav_link:hover, .nav_link:active {
+    padding: 100% 16px;
+    background-color: hsl(16, 100%, 66%, 0.5);
+    font-weight: normal;
+}
+.nav_link:active {
+    background-color: rgba(255, 127, 80, 1);
+    font-weight: bold;
+}
+/* --------- fin header --------- */
+
+
+
+
+/* --------- productos --------- */
+.prod {
+    display:flex;
+    flex-flow: row wrap;
+    row-gap: 50px;
+    justify-content: space-around;
+}
+
+
+.productos {
+    min-width: 300px;
+    max-width: 20%;
+    padding: 1%;
+    background-color: hsl(0, 0%, 95%,0.5);
+    border: 2px solid hsl(0, 0%, 90%);
+    border-radius: 7.5%;
+    text-align: center;
+    overflow: hidden;
+}
+.productos:hover{
+    background-color: hsla(122, 100%, 50%, 0.25);
+}
+
+.productos > * {
+    margin: 3.5% 0;
+}
+
+.caract_prod {
+    list-style-type: circle;
+}
+
+
+.producto_imagen {
+    margin: 15px auto ;
+    max-width: 50%;
+}
+/* -------- fin productos -------- */
+
+
+
+
+/* ----------- footer ----------- */
+#contacto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5%;
+    justify-content: space-evenly;
+}
+
+.footer1, .footer2 {
+    width: 275px;
+    min-height: 275px;
+    min-width: 22%;
+    max-width: 33%;
+}
+.footer1 {
+    height: auto;
+    width: auto;
+}
 
 .redes {
     width: 30px;
 }
 
-label {
-    margin-right: 0.5em;
-    margin-bottom: .25em;
-}
 
 textarea {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
+    height: 100%;
 }
 
-.campo_contacto {
-    padding: 0.5em 1px  0.5em 1px; 
-}
-
-.genero {
-    text-align: center;
-}
-
-
-textarea, .campo_contacto > input{
-    border:none;
-    border-radius: 5px;
-    background-color: gainsboro;
-    transition: width 0.15s, height 0.15s;
-}
-
-textarea:hover, textarea:focus, textarea:active
-.campo_contacto > input:hover,
-.campo_contacto > input:focus,
-input[type=radius]:hover {
-    border:none;
+input:hover, input:focus, input:active,
+textarea:hover, textarea:focus, textarea:active {
     border-radius: 5px;
     background-color: rgba(216, 177, 78, 0.75);
     transform: scale(1.05)
 }
 
-
-.botones {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.botones > input {
-    width: 37%;
-    margin: 0 5% 10px 5%;
-    border-radius: 7px;
-}
-
 #confirma {
     background-color: rgba(127, 255, 0);
-    transition: width 0.15s, height 0.35s;
-    position: static;
 }
 #resetea {
     background-color: rgba(255, 112, 112);
-    transition: width 0.1s, height 0.35s;
-    position: static;
 }
 
 #confirma:hover, #resetea:hover {
-    opacity: 0.80;
-    width: 40%;
-    height: 1.6em;
+    opacity: 0.75;
 
 }
 #confirma:active, #resetea:active {
     font-weight: bold;
 }
 
+.grid {
+    width: 325px;
+    height: 450px;
+    display: grid;
+    border: 1px solid red;
+    grid-template-columns: 1fr 2fr 5px 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 75px 1fr 1fr 1fr;
+    gap: 3% 0px;
+    grid-template-areas:
+        ". nombre . input_nombre ."
+        ". mail . input_mail ."
+        ". . genero . ."
+        ".  input_masc . masc ."
+        ".  input_fem . fem ."
+        ".  input_oth . otro ."
+        ". Interes . dropdown_interes ."
+        ". . comentario . ."
+        ". com_input com_input com_input ."
+        ". . . . ."
+        ". SUBMIT . RESET ."
+    }
 
+    .nombre { grid-area: nombre; margin-top: 15px;}
+    .input_nombre { grid-area: input_nombre; margin-top: 7.5%; }
+
+    .input_mail { grid-area: input_mail; }
+    .mail { grid-area: mail; }
+
+    .genero { grid-area: genero; }
+
+    .input_masc { grid-area: input_masc; }
+    .input_fem { grid-area: input_fem; }
+    .input_oth { grid-area: input_oth; }
+    .input_masc, .input_fem, .input_oth { margin-left: 60%;}
+    .masc { grid-area: masc; }
+    .fem { grid-area: fem; }
+    .otro { grid-area: otro; }
+
+    .interes { grid-area: Interes; }
+    .dropdown_interes { grid-area: dropdown_interes; }
+
+    .comentario { grid-area: comentario; }
+    .comentario_textarea { grid-area: com_input; }
+
+    .confirma { grid-area: SUBMIT; }
+    .resetea { grid-area: RESET; }
+/* --------- fin footer --------- */
+
+
+
+/* Otros productos, en otra pagina */
 .others {
     height: 1.5rem;
 }
@@ -216,7 +255,6 @@ input[type=radius]:hover {
 
 .other_products > ul > a {
     color: #666;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'New Tegomin', serif;
@@ -229,19 +267,19 @@ input[type=radius]:hover {
 .other_products > ul > a:active {
     background-color: rgba(255, 127, 80, 0.5);
 }
+/* -------------------------------- */
 
 
 
 
-
+/* --------- to top arrow --------- */
 .UP {
     border: 1.25px solid red;
     border-radius: 50%;
     height : 60px;
     width: 60px;
     position: fixed;
-    bottom: 10%;
-    right: 7.5%;
+    bottom: 10%; right: 7.5%;
     transition: width 500ms, height 500ms;
     background-color: gainsboro;
     z-index: 9;
@@ -250,8 +288,8 @@ input[type=radius]:hover {
 .UP:hover {
     border-color: greenyellow;
     background-color: rgba(216, 177, 78, 0.75);
-    height : 90px;
-    width: 90px;
+    height : 75px;
+    width: 75px;
 }
 
 
