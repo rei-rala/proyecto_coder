@@ -16,10 +16,11 @@ Desafio 4 - Entregado 17/04/2021:
 Detalle completo acerca de lo que se espera que el estudiante entregue. Se sugiere detallar cada uno de los ítems.
 
 
-Desafios 5 y 6 (Estilos, Box Model) - Entregado el 01/05/2021
-Primera entrega (proyecto final) - Entregado el 01/05/2021
-
-
-Desafios 7 y 8 (Flexbox y Grid) - Entregado el 16/05/2021
-+Aplicado flexbox a secciones header, footer
-+Aplicado grid a formulario de contacto
+Desafios 5 y 6 (Estilos, Box Model) - Entregado el 01/05/2021  
+Primera entrega (proyecto final) - Entregado el 01/05/2021  
+  
+Desafios 7 y 8 (Flexbox y Grid) - Entregado el 16/05/2021  
++Aplicado flexbox a secciones header, footer  
++Aplicado grid a formulario de contacto  
+  
+###

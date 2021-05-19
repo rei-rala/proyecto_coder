@@ -1,16 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=New+Tegomin&display=swap');
 
 /* --------- GLOBALES --------- */
+* {
+    box-sizing: content-box;
+}
 body {
     margin: 0;
     padding: 0;
 }
 
-a, a:hover, a:visited {
+.separador {
+    display: none;
+}
+.paperless {
+    display:none;
+}
+
+.hamburguer_menu {
+    cursor:pointer;
+    display: none;
+    width: 35px;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburguer_menu .linea {
+    background-color: black;
+    height: 3px;
+}
+
+.mail_contacto {
+    text-decoration: double;
+    color:blue;
+}
+a {
     text-decoration: none;
     color: black;
 }
+
 
 a:hover {
     font-weight: bold;
@@ -27,16 +53,17 @@ button:hover, #confirma:hover, #resetea:hover {
 .btn {
     width: 50%;
     padding: 1%;
-    background-color: rgba(245, 245, 245, 0.5);
-    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(245, 245, 245, 1);
+    border: 1px solid hsla(122, 100%, 50%, 1);
     color: black;
     border-radius: 10px;
     margin-bottom: 5%;
-    transition: width 650ms, height 650ms;
+    transition: 0.25s;
 }
 .btn:hover {
-    width: 70%;
+    width: 55%;
     background-color: rgb(0, 182, 6,0.75);
+    border: 1px solid rgba(245, 245, 245, 0.25);
     color: white;
 }
 
@@ -59,19 +86,24 @@ footer {
 /* ----------- header ----------- */
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     align-items: center;
     background-color: antiquewhite;
     overflow: hidden;
     column-gap: 10px;
+    z-index: 9;
 }
 
 .isologo {
     display: flex;
+    font: 1.2em 'Architects Daughter', cursive;
+    margin-left: 1%;
     gap: 5%;
 }
 
 #LOGO {
+    padding-top: 8px;
     max-height: 45px;
 }
 
@@ -102,7 +134,7 @@ header {
 .prod {
     display:flex;
     flex-flow: row wrap;
-    row-gap: 50px;
+    row-gap: 35px;
     justify-content: space-around;
 }
 
@@ -112,13 +144,15 @@ header {
     max-width: 20%;
     padding: 1%;
     background-color: hsl(0, 0%, 95%,0.5);
-    border: 2px solid hsl(0, 0%, 90%);
+    border: 2px solid hsla(122, 100%, 50%, 0.25);
     border-radius: 7.5%;
+    transition: 0.45s;
     text-align: center;
     overflow: hidden;
 }
 .productos:hover{
     background-color: hsla(122, 100%, 50%, 0.25);
+    border: 2px solid hsl(0, 0%, 90%);
 }
 
 .productos > * {
@@ -140,29 +174,39 @@ header {
 
 
 /* ----------- footer ----------- */
+
 #contacto {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 5%;
+    gap: 10%;
     justify-content: space-evenly;
 }
 
 .footer1, .footer2 {
-    width: 275px;
-    min-height: 275px;
-    min-width: 22%;
-    max-width: 33%;
+    min-width: 25%;
+    max-width: 30%;
 }
-.footer1 {
-    height: auto;
-    width: auto;
+
+
+.lista_contacto {
+    padding: 0;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.lista_contacto li {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .redes {
+    margin-right: 3%;
     width: 30px;
 }
-
 
 textarea {
     width: 100%;
@@ -173,7 +217,8 @@ input:hover, input:focus, input:active,
 textarea:hover, textarea:focus, textarea:active {
     border-radius: 5px;
     background-color: rgba(216, 177, 78, 0.75);
-    transform: scale(1.05)
+    transform: scale(1.05);
+    z-index: 999;
 }
 
 #confirma {
@@ -192,51 +237,52 @@ textarea:hover, textarea:focus, textarea:active {
 }
 
 .grid {
-    width: 325px;
-    height: 450px;
     display: grid;
+    justify-items: center;
     border: 1px solid red;
-    grid-template-columns: 1fr 2fr 5px 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 75px 1fr 1fr 1fr;
+    border-radius: 15px;
+    grid-template-columns: 0.1fr 3fr 0.1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 12% 1fr 1fr 1fr;
     gap: 3% 0px;
     grid-template-areas:
-        ". nombre . input_nombre ."
-        ". mail . input_mail ."
-        ". . genero . ."
-        ".  input_masc . masc ."
-        ".  input_fem . fem ."
-        ".  input_oth . otro ."
-        ". Interes . dropdown_interes ."
-        ". . comentario . ."
-        ". com_input com_input com_input ."
-        ". . . . ."
-        ". SUBMIT . RESET ."
+        ". . ."
+        ". nombre ."
+        ". mail ."
+        ". genero ."
+        ". input_masc ."
+        ". input_fem ."
+        ". input_otro ."
+        ". interes ."
+        ". comentario . "
+        ". comentario_input ."
+        "SUBMIT . RESET"
+        ". . ."
     }
 
-    .nombre { grid-area: nombre; margin-top: 15px;}
-    .input_nombre { grid-area: input_nombre; margin-top: 7.5%; }
+    .nombre { grid-area: nombre; width: 25%; position: relative; right: 50%; }
+    .input_nombre { grid-area: nombre; position: relative; left: 15%; }
 
-    .input_mail { grid-area: input_mail; }
-    .mail { grid-area: mail; }
+    .input_mail { grid-area: mail; position: relative; left: 15%; }
+    .mail { grid-area: mail; width: 25%; position: relative; right: 50%; }
 
     .genero { grid-area: genero; }
 
     .input_masc { grid-area: input_masc; }
     .input_fem { grid-area: input_fem; }
-    .input_oth { grid-area: input_oth; }
-    .input_masc, .input_fem, .input_oth { margin-left: 60%;}
-    .masc { grid-area: masc; }
-    .fem { grid-area: fem; }
-    .otro { grid-area: otro; }
+    .input_oth { grid-area: input_otro; }
+    .input_masc, .input_fem, .input_oth { padding-right: 50%;}
+    .masc { grid-area: input_masc; }
+    .fem { grid-area: input_fem; }
+    .otro { grid-area: input_otro; }
 
-    .interes { grid-area: Interes; }
-    .dropdown_interes { grid-area: dropdown_interes; }
+    .interes { grid-area: interes; }
+    .dropdown_interes { grid-area: interes; }
 
     .comentario { grid-area: comentario; }
-    .comentario_textarea { grid-area: com_input; }
+    .comentario_textarea { grid-area: comentario_input; width: 100%; }
 
-    .confirma { grid-area: SUBMIT; }
-    .resetea { grid-area: RESET; }
+    .confirma { grid-area: SUBMIT; position:relative; left: 125%; top:50%; }
+    .resetea { grid-area: RESET;position:relative; right: 125%; top:50%;}
 /* --------- fin footer --------- */
 
 
@@ -279,7 +325,7 @@ textarea:hover, textarea:focus, textarea:active {
     height : 60px;
     width: 60px;
     position: fixed;
-    bottom: 10%; right: 7.5%;
+    bottom: 5%; right: 7.5%;
     transition: width 500ms, height 500ms;
     background-color: gainsboro;
     z-index: 9;
@@ -296,4 +342,308 @@ textarea:hover, textarea:focus, textarea:active {
 .UP_img {
     width: 85%;
     margin: 7.5% 7.5%;
+}
+
+
+/* --- MEDIA QUERYs --- */
+@media (min-width:400px) and (max-width: 767px) {
+
+    .separador {
+        display: block;
+        margin: 5% 0;
+    }
+    
+    header {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 127, 80, 0.5);
+    }
+
+    #LOGO {
+        margin: 15px 0 15px 15px;
+        height: 30px;
+    }
+    .paperless_min {
+        display:none;
+    }
+    .paperless {
+        font-size: 1.2em;
+        font-weight: bold;
+        display:block;
+    }
+
+    nav {
+        display: none;
+    }
+    .hamburguer_menu {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    main {
+        margin-top: 5em;
+        padding: 0 15px;
+    }
+
+    main, #seccion_productos, footer {
+        font-size: larger;
+        text-align: center;
+    }
+
+    .productos {
+        padding: 2%;
+        height: max-content;
+        max-width: 90%;
+    }
+    .caract_prod {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .lista_contacto {
+        width: 95%;
+        padding: 0;
+        display:flex;
+        flex-flow: colum wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .lista_contacto li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .redes {
+        width: 50px;
+    }
+    .seccion_footer {
+        width: 70%;
+    }
+    .nombre, .mail {
+        right: 25%;
+    }
+    .confirma, .resetea {
+        position:relative;
+        top: 15%;
+    }
+
+
+    .UP {
+        width: 45px; height: 45px;
+        bottom: 5%; right: 8%;
+    }
+    .UP:hover {
+        height : 55px; width: 55px;
+    }
+}
+
+@media (min-width:550px) and (max-width: 768px) and (orientation:landscape) {
+
+    .separador {
+        display: block;
+        margin: 5% 0;
+    }
+    
+    header {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 127, 80, 0.5);
+        height: 45px;
+    }
+
+    #LOGO {
+        margin: 15px 0 15px 15px;
+        height: 30px;
+    }
+    .paperless_min {
+        display:none;
+    }
+    .paperless {
+        font-size: 1.2em;
+        font-weight: bold;
+        display:block;
+    }
+
+    nav {
+        display: none;
+    }
+    .hamburguer_menu {
+        display: flex;
+        margin-right: 20px;
+    }
+
+
+
+    main {
+        margin-top: 3em;
+        padding: 0 15px;
+    }
+
+    main, #seccion_productos, footer {
+        font-size: larger;
+        text-align: center;
+    }
+
+    .productos {
+        padding: 2%;
+        max-width: 40%;
+        min-width: 40%;
+        height: max-content;
+        width: 90%;
+    }
+    .caract_prod {
+        display: none;
+    }
+
+
+    .seccion_footer {
+        min-width: 80%;
+        margin-bottom: 7%;
+    }
+
+    .redes {
+        width: 50px;
+    }
+    .lista_contacto {
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    .lista_contacto li {
+        width: 45%;
+    }
+    .nombre, .mail {
+        position: relative;
+        right: 25%;
+    }
+    
+    .confirma, .resetea {
+        position:relative;
+        top: 15%;
+    }
+
+    .UP {
+        width: 45px; height: 45px;
+        bottom: 5%; right: 3%;
+    }
+    .UP:hover {
+        height : 55px; width: 55px;
+    }
+}
+
+@media (max-width: 550px) {
+    * {
+        margin: 0;
+    }
+    .separador {
+        display: block;
+        margin: 5% 0;
+    }
+    
+    header {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 127, 80, 0.5);
+    }
+
+    #LOGO {
+        display: none;
+    }
+    .paperless_min {
+        display:none;
+    }
+    .paperless {
+        padding-left: 10px;;
+        font-size: 1.1em;
+        font-weight: bold;
+        display:block;
+        margin: 5% 0;
+    }
+
+    nav {
+        display: none;
+    }
+    .hamburguer_menu {
+        display: flex;
+        margin-right: 15px;
+    }
+
+    main {
+        margin-top: 3.5em;
+        padding: 0 15px;
+    }
+
+    main, #seccion_productos, footer {
+        font-size: large;
+        text-align: center;
+    }
+
+    .productos {
+        background-image: url("/img/pc.png") ;
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position: bottom right;
+        padding: 3%;
+        min-width: 85%;
+    }
+    .caract_prod {
+        display: none;
+    }
+    .producto_imagen {
+        display:none;
+    }
+
+
+
+    .seccion_footer {
+        min-width: 80%;
+        margin-bottom: 7%;
+    }
+
+    .lista_contacto {
+        width: 95%;
+        padding: 0;
+        display:flex;
+        flex-flow: colum wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .lista_contacto li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .redes {
+        width: 50px;
+        min-width: 10%;
+    }
+
+    .nombre, .mail {
+        right: 55%;
+        width: 45%;
+    }
+
+    .confirma, .resetea {
+        position:relative;
+        top: 15%;
+    }
+
+    .UP {
+        width: 45px; height: 45px;
+        bottom: 3.5%; right: 8%;
+        opacity: 0.75;
+    }
+    .UP:hover {
+        height : 55px; width: 55px;
+    }
 }
