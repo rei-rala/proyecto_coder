@@ -17,6 +17,7 @@ body {
 }
 
 .hamburguer_menu {
+    overflow: visible;
     cursor:pointer;
     display: none;
     width: 35px;
@@ -107,14 +108,11 @@ header {
     max-height: 45px;
 }
 
-.vacio {
-    background-color: blue;
-}
-
 .nav_link {
     color: #666;
     padding: 14px 16px;
     font-family: 'New Tegomin', serif;
+    transition: 0.5s;
 }
 .nav_link:hover, .nav_link:active {
     padding: 100% 16px;
@@ -146,13 +144,13 @@ header {
     background-color: hsl(0, 0%, 95%,0.5);
     border: 2px solid hsla(122, 100%, 50%, 0.25);
     border-radius: 7.5%;
-    transition: 0.45s;
+    transition: 0.5s;
     text-align: center;
     overflow: hidden;
 }
 .productos:hover{
-    background-color: hsla(122, 100%, 50%, 0.25);
-    border: 2px solid hsl(0, 0%, 90%);
+    background: radial-gradient(circle, hsla(122, 100%, 50%, 0.5) 50%,hsla(122, 100%, 50%, 0.2));
+    border: 3px solid hsl(0, 0%, 90%);
 }
 
 .productos > * {
@@ -585,6 +583,9 @@ textarea:hover, textarea:focus, textarea:active {
         font-size: large;
         text-align: center;
     }
+    .producto_imagen {
+        width: 0;
+    }
 
     .productos {
         background-image: url("/img/pc.png") ;
@@ -593,12 +594,28 @@ textarea:hover, textarea:focus, textarea:active {
         background-position: bottom right;
         padding: 3%;
         min-width: 85%;
+        transition: 0.5s;
     }
+    .pr4 {
+        background-image: url("/img/papers.png") ;
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position: bottom right;
+        padding: 3%;
+        min-width: 85%;
+        transition: 0.5s;
+    }
+
+
+    .productos:hover > .producto_imagen{
+        transition: 0.7s;
+        display: block;
+        width: 75%;
+    }
+
     .caract_prod {
+        transition: 0.5s;
         display: none;
-    }
-    .producto_imagen {
-        display:none;
     }
 
 
