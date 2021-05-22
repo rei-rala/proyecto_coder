@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=New+Tegomin&display=swap');
 
 /* --------- GLOBALES --------- */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: content-box;
 }
@@ -54,8 +58,8 @@ button:hover, #confirma:hover, #resetea:hover {
 .btn {
     width: 50%;
     padding: 1%;
-    background-color: rgba(245, 245, 245, 1);
-    border: 1px solid hsla(122, 100%, 50%, 1);
+    background-color: rgba(245, 245, 245);
+    border: 1px solid hsla(122, 100%, 50%);
     color: black;
     border-radius: 10px;
     margin-bottom: 5%;
@@ -64,7 +68,7 @@ button:hover, #confirma:hover, #resetea:hover {
 .btn:hover {
     width: 55%;
     background-color: rgb(0, 182, 6,0.75);
-    border: 1px solid rgba(245, 245, 245, 0.25);
+    border: 1px solid rgba(245, 245, 245);
     color: white;
 }
 
@@ -85,17 +89,31 @@ footer {
 
 
 /* ----------- header ----------- */
+@keyframes aparecer {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+.isologo, nav, .hamburguer_menu {
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     align-items: center;
-    background-color: antiquewhite;
+    background: linear-gradient(hsl(34, 78%, 91%, 0.77), hsl(34, 78%, 91%, 0.88), hsl(34, 78%, 91%, 1));
     overflow: hidden;
     column-gap: 10px;
     z-index: 9;
 }
 
+#LOGO {
+    padding-top: 8px;
+    max-height: 45px;
+}
 .isologo {
     display: flex;
     font: 1.2em 'Architects Daughter', cursive;
@@ -103,25 +121,22 @@ header {
     gap: 5%;
 }
 
-#LOGO {
-    padding-top: 8px;
-    max-height: 45px;
-}
 
 .nav_link {
     color: #666;
-    padding: 14px 16px;
+    padding: 8% 16px;
     font-family: 'New Tegomin', serif;
-    transition: 0.5s;
+    transition: 0.3s;
 }
-.nav_link:hover, .nav_link:active {
-    padding: 100% 16px;
-    background-color: hsl(16, 100%, 66%, 0.5);
+.nav_link:hover {
+    background-color: hsl(16, 100%, 66%, 0.75);
     font-weight: normal;
 }
 .nav_link:active {
     background-color: rgba(255, 127, 80, 1);
     font-weight: bold;
+    transform: scale(0.3);
+
 }
 /* --------- fin header --------- */
 
@@ -144,17 +159,22 @@ header {
     background-color: hsl(0, 0%, 95%,0.5);
     border: 2px solid hsla(122, 100%, 50%, 0.25);
     border-radius: 7.5%;
-    transition: 0.5s;
+    transition: all 1s;
     text-align: center;
     overflow: hidden;
 }
-.productos:hover{
+.productos:hover, .productos:active{
     background: radial-gradient(circle, hsla(122, 100%, 50%, 0.5) 50%,hsla(122, 100%, 50%, 0.2));
     border: 3px solid hsl(0, 0%, 90%);
+    transition: all 1s;
+}
+.productos:hover > .producto_imagen, .productos:active > .producto_imagen  {
+    transform: scale(1.1);
 }
 
 .productos > * {
     margin: 3.5% 0;
+    transition: 0.5s;
 }
 
 .caract_prod {
@@ -163,6 +183,7 @@ header {
 
 
 .producto_imagen {
+    display: block;
     margin: 15px auto ;
     max-width: 50%;
 }
@@ -323,9 +344,9 @@ textarea:hover, textarea:focus, textarea:active {
     height : 60px;
     width: 60px;
     position: fixed;
-    bottom: 5%; right: 7.5%;
+    bottom: 4%; right: 2.5%;
     transition: width 500ms, height 500ms;
-    background-color: gainsboro;
+    background-color: hsl(0, 0%, 86%, 0.75);
     z-index: 9;
 }
 
@@ -611,6 +632,7 @@ textarea:hover, textarea:focus, textarea:active {
         transition: 0.7s;
         display: block;
         width: 75%;
+        transition: 0.5s;
     }
 
     .caract_prod {

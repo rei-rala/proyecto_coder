@@ -17,10 +17,20 @@ Detalle completo acerca de lo que se espera que el estudiante entregue. Se sugie
 
 
 Desafios 5 y 6 (Estilos, Box Model) - Entregado el 01/05/2021  
-Primera entrega (proyecto final) - Entregado el 01/05/2021  
+###Primera entrega (proyecto final) - Entregado el 01/05/2021  
   
 Desafios 7 y 8 (Flexbox y Grid) - Entregado el 16/05/2021  
 +Aplicado flexbox a secciones header, footer  
 +Aplicado grid a formulario de contacto  
+    
+Desafio 9 (Transformaciones y animaciones) - Entregado el 22/05/2021  
++Aplicado gradientes en index
++Añadido animaciones y transformaciones en partes varias  
+    
   
+###Segunda entrega del proyecto final - Entregado el 22/05/2021  
+  
+    
+Desafios 10 y 11 (git, github) - Entregado el 22/05/2021  
+Creacion de repositorios
 ###
