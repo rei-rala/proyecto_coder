@@ -1,0 +1,37 @@
+.info-producto {
+  display: flex;
+}
+
+.seccion_otros {
+  display: flex;
+  justify-content: center;
+  column-gap: 2%;
+}
+.seccion_otros h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.otro_producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 8px;
+}
+.otro_producto:hover {
+  background-color: chartreuse;
+}
+.img_otro_producto {
+  width: 50px;
+}
+.produ_full_img {
+  padding-left: 5%;
+  height: $productoImgWidth * 0.75;
+  width: $productoImgWidth;
+}
+.sub2 {
+  display: flex;
+  align-items: center;
+}

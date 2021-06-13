@@ -9,7 +9,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="styles/main.css" />
 
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -25,19 +25,27 @@
 
 <body>
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-light">
-		<img class="logo" src="img/pc.png" alt="Paperless" />
-		<a class="navbar-brand" href="index.html#">Paperless</a>
+		<a href="index.html#" class='navbar__link'>
+			<img class="navbar__link--logo" src="img/pc.png" alt="Paperless" />
+		</a>
+
+		<a class="navbar--brand" href="index.html#">
+			Paperless
+		</a>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="#">Inicio</a>
-				<a class="nav-item nav-link" href="#seccion_productos">Productos</a>
-				<a class="nav-item nav-link" href="#contacto">Contacto</a>
+
+		<div class="collapse navbar-collapse navbar__sub" id="navbarNavAltMarkup">
+			<div class="navbar-nav navbar__sub__list">
+				<a class="navbar__sub__list--item nav-link active" href="#">Inicio</a>
+				<a class="navbar__sub__list--item nav-link" href="#seccion_productos">Productos</a>
+				<a class="navbar__sub__list--item nav-link" href="#contacto">Contacto</a>
 			</div>
 		</div>
+
 	</nav>
 
 	<main class='container-fluid' id="inicio">
@@ -64,8 +72,8 @@
 	<section class='container-fluid productos' id="seccion_productos">
 		<h2>Productos</h2>
 		<p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laboriosam.</p>
-		<div
-			class="container-fluid row d-flex align-items-stretch row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-4">
+		<div id='prod_section'
+			class="container-fluid row d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-4">
 
 			<div class="productoX mb-2 align-self-center col h-100 align-items-center">
 				<h4>Producto 1</h4>
@@ -115,8 +123,9 @@
 			<div class="productoX mb-2 align-self-center pr4 col h-100 align-items-center">
 				<h4>Otro producto</h4>
 				<p>
-					Tenes una sugerencia? <br /><br /><br />
+					Tenes una sugerencia?
 				</p>
+				<p>Escribinos tu sugerencia <a href="#contacto">debajo</a>!</p>
 				<img src="img/papers.png" class="producto_imagen prX" alt="Producto cuatro" />
 				<a class="btn btn-outline-primary" href="#contacto">Sugerencia</a>
 			</div>
@@ -152,6 +161,7 @@
 		</div>
 
 		<div class="footer_section col-12 col-sm-6 col-md-6">
+			<h4>Envienos un mensaje</h4>
 			<form action="" class="col align-top " id="contactar">
 				<label class='col-3' for="nombre"> Nombre</label>
 				<input class='col-8' type="text" placeholder="Nombre" id="nombre" required />
@@ -161,7 +171,7 @@
 
 				<label class='col-3' for="interes"> Interes: </label>
 				<select class='col-8' name="interes" id="interes">
-					<option value="ProductoOtro">Otro</option>
+					<option value="ProductoOtro">Sugerencia</option>
 					<option value="Producto1">Producto 1</option>
 					<option value="Producto2">Producto 2</option>
 					<option value="Producto3">Producto 3</option>
@@ -187,7 +197,9 @@
 	</footer>
 
 	<div class="UP">
-		<a href="#"><img class="UP_img" src="img/up.png" href="#" title="Ir arriba" alt="Ir arriba" /></a>
+		<a href="#" class="UP__link">
+			<img class="UP__link--img" src="img/up.png" href="#" title="Ir arriba" alt="Ir arriba" />
+		</a>
 	</div>
 
 	<div style="background-color: black; height: 100%">_</div>

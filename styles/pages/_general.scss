@@ -1,0 +1,123 @@
+.navbar {
+  padding: 0;
+  background: linear-gradient(
+    hsla(33, 100%, 84%, 0.77),
+    hsla(33, 100%, 84%, 0.5),
+    #faead6
+  );
+  justify-content: space-between;
+  box-shadow: $shadow;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  &--brand {
+    color: green;
+    font: 1.2em "Architects Daughter", cursive;
+    text-shadow: $shadow;
+  }
+  &__link {
+    &--logo {
+      max-height: 35px;
+      margin: 0.5%;
+    }
+  }
+  &-toggler {
+    margin: 1%;
+  }
+}
+
+.navbar__sub {
+  &__list {
+    margin: 0 25px;
+    &--item {
+      font-weight: bold;
+      padding: 7.5% 0;
+      height: 100%;
+      font-family: "New Tegomin", serif;
+      transition: 0.5s;
+    }
+    &--item:hover {
+      background-color: hsla(16, 100%, 66%, 0.75);
+    }
+    &--item:active {
+      background-color: rgba(255, 127, 80, 1);
+      font-weight: bold;
+    }
+  }
+}
+/* FIN NAV */
+
+/* BODY GRAL  */
+body {
+  background: rgb(131, 131, 131);
+  background: linear-gradient(
+    0deg,
+    rgba(131, 131, 131, 1) 2%,
+    rgba(255, 249, 242, 1) 50%
+  );
+}
+
+/* FIN BODY GRAL */
+
+/* FOOTER */
+
+footer {
+  margin-left: 0;
+  width: 100%;
+  padding: 0 0;
+  .footer_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+}
+
+.lista_contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5%;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+}
+.redes {
+  width: 10%;
+}
+
+form .col-12 {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.UP {
+  border: 1.25px solid red;
+  border-radius: 50%;
+  width: $goUpSize;
+  height: $goUpSize;
+  position: fixed;
+  bottom: 4%;
+  right: 2.5%;
+  transition: width 500ms, height 500ms;
+  background-color: hsla(0, 0%, 86%, 0.75);
+  box-shadow: $shadow;
+  z-index: 9;
+  &__link {
+    &--img {
+      width: 85%;
+      margin: 7.5% 7.5%;
+    }
+  }
+}
+
+.UP:hover {
+  border-color: greenyellow;
+  background-color: rgba(216, 177, 78, 0.75);
+  width: $goUpSize * 1.25;
+  height: $goUpSize * 1.25;
+}
+
+/* FIN FOOTER  */

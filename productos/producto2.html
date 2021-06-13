@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
@@ -19,18 +20,26 @@
 
 <body id="product_page">
 
+
   <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
-    <img class="logo" src="../img/pc.png" alt="Paperless" />
-    <a class="navbar-brand" href="../index.html#">Paperless</a>
+    <a href="../index.html#" class='navbar__link'>
+      <img class="navbar__link--logo" src="../img/pc.png" alt="Paperless" />
+    </a>
+
+    <a class="navbar--brand" href="../index.html#">
+      Paperless
+    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="../index.html">Inicio</a>
-        <a class="nav-item nav-link active" href="../index.html#seccion_productos">Productos</a>
-        <a class="nav-item nav-link" href="#contacto">Contacto</a>
+
+    <div class="collapse navbar-collapse navbar__sub" id="navbarNavAltMarkup">
+      <div class="navbar-nav navbar__sub__list">
+        <a class="navbar__sub__list--item nav-link" href="../index.html#">Inicio</a>
+        <a class="navbar__sub__list--item nav-link active" href="../index.html#seccion_productos">Productos</a>
+        <a class="navbar__sub__list--item nav-link" href="../index.html#contacto">Contacto</a>
       </div>
     </div>
   </nav>
@@ -52,8 +61,7 @@
       </p>
     </div>
     <div class="sub2">
-      <img class='produ_full_img rounded-pill ' src="../img/rob-curran-sUXXO3xPBYo-unsplash.jpg" alt="random imagen"
-        title='Antigüedad'>
+      <img class='produ_full_img rounded-pill ' src="../img/green_forest.jpg" alt="random imagen" title='Antigüedad'>
     </div>
   </main>
 
@@ -143,7 +151,9 @@
   </footer>
 
   <div class="UP">
-    <a href="#"><img class="UP_img" src="../img/up.png" href="#" title="Ir arriba" alt="Ir arriba" /></a>
+    <a href="#" class="UP__link">
+      <img class="UP__link--img" src="../img/up.png" href="#" title="Ir arriba" alt="Ir arriba" />
+    </a>
   </div>
 
   <div style="background-color: black; height: 100%">_</div>

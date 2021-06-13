@@ -1,0 +1,41 @@
+@media (max-width: 900px) {
+  #navbar {
+    position: fixed;
+    width: 100%;
+  }
+  #inicio {
+    padding-top: 4rem;
+    flex-flow: column wrap;
+    .sub1 {
+      display: block;
+    }
+
+    .sub2 {
+      display: flex;
+      align-self: center;
+      width: 50%;
+      .produ_full_img {
+        padding-left: 5%;
+        width: 100%;
+      }
+    }
+  }
+  .productoX,
+  .pr4 {
+    min-width: 250px;
+    max-width: 24%;
+    height: 400px;
+    margin: 15px;
+  }
+
+  .UP {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .UP:hover,
+  .UP:active {
+    width: 13vw;
+    height: 13vw;
+  }
+}

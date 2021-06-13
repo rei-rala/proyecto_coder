@@ -1,0 +1,25 @@
+{
+  "name": "proyecto_coderhouse",
+  "version": "1.0.0",
+  "description": "Proyecto para Coder (Desa Web)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path sass styles/main.scss styles/main.css",
+    "watch-css": "nodemon -e scss -x\"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rei-rala/proyecto_coder.git"
+  },
+  "author": "Ramon Irala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rei-rala/proyecto_coder/issues"
+  },
+  "homepage": "https://github.com/rei-rala/proyecto_coder#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 250px) {
+  * {
+    font-size: 0.9rem;
+  }
+
+  .navbar {
+    &__link {
+      display: none;
+    }
+    &--brand {
+      padding-left: 2%;
+    }
+    &-toggler {
+      padding: 0;
+      width: 25%;
+    }
+  }
+
+  .UP {
+    width: $goUpSize;
+    height: $goUpSize;
+  }
+}

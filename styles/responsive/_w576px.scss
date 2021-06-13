@@ -1,0 +1,60 @@
+@media screen and (max-width: 576px) {
+  #prod_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+
+    .productoX {
+      height: 50px;
+      max-width: 90%;
+      transition: 1s;
+      background-image: url("../img/pc.png");
+      background-size: 10%;
+      background-repeat: no-repeat;
+      background-position: 99% 99%;
+      .caract_prod {
+        display: none;
+      }
+      .producto_imagen {
+        width: 0;
+        height: 0;
+        transition: 0.15s;
+        width: 30%;
+      }
+    }
+    .pr4 {
+      background-image: url("../img/papers.png");
+    }
+
+    .productoX:hover,
+    .productoX:active {
+      .producto_imagen {
+        transition: 0.5s;
+        display: block;
+        width: 120px;
+        height: 70px;
+      }
+      .prX {
+        height: 90px;
+      }
+    }
+  }
+
+  .sub1 {
+    text-align: center;
+  }
+  .sub2 {
+    width: 100vw;
+    .produ_full_img {
+      padding-left: 5%;
+      height: 75%;
+      width: 100%;
+    }
+  }
+
+  .seccion_otros {
+    flex-direction: column;
+  }
+}

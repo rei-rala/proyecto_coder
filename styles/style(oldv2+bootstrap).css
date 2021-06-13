@@ -8,9 +8,6 @@ a {
   background-color: rgb(0, 0, 0, 0.5);
 }
 
-#carousel {
-  width: 40%;
-}
 body {
   background: rgb(131, 131, 131);
   background: linear-gradient(
@@ -19,6 +16,7 @@ body {
     rgba(255, 249, 242, 1) 50%
   );
 }
+
 #navbar {
   padding: 0;
   background: linear-gradient(
@@ -29,6 +27,7 @@ body {
   justify-content: space-between;
   box-shadow: 1px 1px rgba(85, 85, 85, 0.15);
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 #navbar:visible > .up {
   display: none;
@@ -59,10 +58,16 @@ body {
   font-weight: bold;
 }
 
-.productoX {
+.productoX,
+.pr4 {
+  min-width: 400px;
+  max-width: 23%;
+  height: 500px;
+  margin: 1%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: beige;
   border: 1px double hsla(122, 100%, 50%, 0.5);
   box-shadow: 5px 5px rgb(0, 0, 0, 0.2);
   border-radius: 5%;
@@ -72,14 +77,15 @@ body {
 .productoX:hover,
 .productoX:active {
   background: radial-gradient(
-    circle,
-    hsla(122, 100%, 50%, 0.5) 50%,
-    hsla(122, 100%, 50%, 0.2)
+    ellipse,
+    hsla(122, 100%, 50%, 0.7) 30%,
+    hsla(122, 100%, 50%, 0.1)
   );
 }
 
 .productoX:hover > .producto_imagen {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 .btn {
@@ -95,17 +101,24 @@ body {
   transition: 1s;
 }
 
+footer {
+  margin-left: 0;
+  width: 100%;
+  padding: 0 0;
+}
 .footer_section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   margin-bottom: 2%;
 }
 
 .lista_contacto {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 5%;
   text-align: center;
   list-style-type: none;
   padding-left: 0;
@@ -154,6 +167,11 @@ form .col-12 {
   justify-content: center;
   column-gap: 2%;
 }
+.seccion_otros h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .otro_producto {
   display: flex;
   flex-direction: column;
@@ -177,8 +195,42 @@ form .col-12 {
   align-items: center;
 }
 
+@media (max-width: 900px) {
+  #navbar {
+    position: fixed;
+    width: 100%;
+  }
+  #inicio {
+    padding-top: 4rem;
+  }
+  .productoX,
+  .pr4 {
+    min-width: 250px;
+    max-width: 24%;
+    height: 400px;
+    margin: 15px;
+  }
+  .info-producto {
+    flex-flow: column wrap;
+  }
+  .produ_full_img {
+    padding-left: 5%;
+    width: 100%;
+  }
+  .sub1 {
+    display: block;
+  }
+  .sub2 {
+    display: flex;
+    align-self: center;
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .productoX {
+    height: 50px;
+    max-width: 90%;
     transition: 1s;
     background-image: url("../img/pc.png");
     background-size: 10%;
@@ -193,23 +245,53 @@ form .col-12 {
     display: none;
   }
   .producto_imagen {
-    display: none;
-    transition: 1s;
+    width: 0;
+    height: 0;
+    transition: 0.15s;
     width: 30%;
   }
+
   .productoX:hover > .producto_imagen {
-    transition: 1s;
+    transition: 0.5s;
     display: block;
-    width: 30%;
+    width: 120px;
+    height: 70px;
+  }
+  .productoX:hover > .prX {
+    height: 90px;
+  }
+
+  .seccion_otros {
+    flex-direction: column;
+  }
+  .sub1 {
+    text-align: center;
+  }
+  .sub2 {
+    width: 100%;
+  }
+  .produ_full_img {
+    padding-left: 0;
+  }
+
+  .UP {
+    width: 18vw;
+    height: 18vw;
   }
 }
 
-@media (max-width: 768px) {
-  #navbar {
-    position: fixed;
-    width: 100%;
+@media screen and (max-width: 250px) {
+  * {
+    font-size: 0.9rem;
   }
-  #inicio {
-    padding-top: 4rem;
+  .logo {
+    display: none;
+  }
+  .navbar-brand {
+    padding-left: 5%;
+  }
+  .navbar-toggler {
+    padding: 0;
+    width: 25%;
   }
 }
