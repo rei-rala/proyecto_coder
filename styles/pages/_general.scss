@@ -92,8 +92,11 @@ form .col-12 {
   justify-content: center;
   column-gap: 2rem;
 }
+/* FIN FOOTER  */
 
+/* Boton para ir al top */
 .UP {
+  cursor: pointer;
   border: 1.25px solid red;
   border-radius: 50%;
   width: $goUpSize;
@@ -119,5 +122,4 @@ form .col-12 {
   width: $goUpSize * 1.25;
   height: $goUpSize * 1.25;
 }
-
-/* FIN FOOTER  */
+/* Fin boton para ir al top */

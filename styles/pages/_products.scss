@@ -20,8 +20,15 @@
   border-radius: 5px;
   padding: 8px;
 }
-.otro_producto:hover {
-  background-color: chartreuse;
+.seccion_otros {
+  a {
+    .otro_producto {
+      border: $prodBorder;
+    }
+    .otro_producto:hover {
+      background: $prodHoverBkgColor;
+    }
+  }
 }
 .img_otro_producto {
   width: 50px;

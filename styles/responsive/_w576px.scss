@@ -18,10 +18,9 @@
         display: none;
       }
       .producto_imagen {
-        width: 0;
+        width: 20%;
         height: 0;
         transition: 0.15s;
-        width: 30%;
       }
     }
     .pr4 {
@@ -30,6 +29,7 @@
 
     .productoX:hover,
     .productoX:active {
+      background: $prodHoverBkgColor;
       .producto_imagen {
         transition: 0.5s;
         display: block;
@@ -56,5 +56,10 @@
 
   .seccion_otros {
     flex-direction: column;
+    gap: 1vh;
+    width: 75%;
+    .otro_producto {
+      flex-direction: row;
+    }
   }
 }

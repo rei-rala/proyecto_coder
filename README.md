@@ -30,6 +30,10 @@ Desafio 9 (Transformaciones y animaciones) - Entregado el 22/05/2021
 Desafios 10 y 11 (git, github) - Entregado el 22/05/2021  
 Creacion de repositorio
 
-Desafio 11 (Bootstrap) - Entregado 05/06/2021  
+Desafio 12 y 13 (Bootstrap) - Entregado 05/06/2021  
 +Implementacion de Bootstrap  
 +Reemplazado CSS viejo
+
+Desafio 14 y 15 (SASS) + Tercera entrega del proyecto final - Entregado 13/06/2021  
+-Implementacion de SASS (Se convervan archivos CSS antiguos aunque ignorados)  
+-'Normalizacion' y retoque de estilos
