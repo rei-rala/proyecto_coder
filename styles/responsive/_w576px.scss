@@ -10,7 +10,7 @@
       height: 50px;
       max-width: 90%;
       transition: 1s;
-      background-image: url("../img/pc.png");
+      background-image: $pcImg;
       background-size: 10%;
       background-repeat: no-repeat;
       background-position: 99% 99%;
@@ -24,7 +24,7 @@
       }
     }
     .pr4 {
-      background-image: url("../img/papers.png");
+      background-image: $papersImg;
     }
 
     .productoX:hover,
@@ -59,7 +59,7 @@
     gap: 1vh;
     width: 75%;
     .otro_producto {
-      flex-direction: row;
+      flex-direction: row !important;
     }
   }
 }

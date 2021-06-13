@@ -1,0 +1,40 @@
+@media screen and (max-width: 300px) {
+  * {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .navbar {
+    &__link {
+      display: none;
+    }
+    &--brand {
+      padding-left: 2%;
+    }
+    &-toggler {
+      padding: 0;
+      width: 25%;
+    }
+  }
+
+  #prod_section {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    .productoX {
+      margin: 0;
+      min-width: 50%;
+      max-width: 95%;
+    }
+  }
+
+  .redes {
+    width: 35px;
+  }
+  .UP {
+    width: $goUpSize;
+    height: $goUpSize;
+  }
+}

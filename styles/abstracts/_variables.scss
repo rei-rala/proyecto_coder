@@ -9,9 +9,13 @@ $prodHoverBkgColor: radial-gradient(
   hsla(122, 100%, 50%, 0.1)
 );
 
+$pcImg: url("../img/pc.png");
+$papersImg: url("../img/papers.png");
+
 /* testing? */
-$FlexCenter: (
-  display: flex,
-  align-items: center,
-  justify-content: center,
-);
+@mixin flexCenterEverything() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

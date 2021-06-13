@@ -17,12 +17,16 @@
   }
   &__link {
     &--logo {
+      cursor: pointer;
       max-height: 35px;
       margin: 0.5%;
     }
   }
   &-toggler {
     margin: 1%;
+    &-icon {
+      cursor: pointer;
+    }
   }
 }
 
@@ -64,27 +68,22 @@ body {
 footer {
   margin-left: 0;
   width: 100%;
-  padding: 0 0;
   .footer_section {
-    display: flex;
+    @include flexCenterEverything();
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2%;
+    padding-bottom: 2vh;
   }
 }
 
 .lista_contacto {
-  display: flex;
+  @include flexCenterEverything();
   flex-direction: column;
-  justify-content: space-between;
-  gap: 5%;
-  text-align: center;
+  gap: 0.5vh;
   list-style-type: none;
   padding-left: 0;
 }
 .redes {
-  width: 10%;
+  width: 50px;
 }
 
 form .col-12 {
@@ -96,7 +95,6 @@ form .col-12 {
 
 /* Boton para ir al top */
 .UP {
-  cursor: pointer;
   border: 1.25px solid red;
   border-radius: 50%;
   width: $goUpSize;
@@ -110,6 +108,7 @@ form .col-12 {
   z-index: 9;
   &__link {
     &--img {
+      cursor: pointer;
       width: 85%;
       margin: 7.5% 7.5%;
     }
