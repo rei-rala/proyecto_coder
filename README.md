@@ -35,5 +35,6 @@ Desafio 12 y 13 (Bootstrap) - Entregado 05/06/2021
 +Reemplazado CSS viejo
 
 Desafio 14 y 15 (SASS) + Tercera entrega del proyecto final - Entregado 13/06/2021  
--Implementacion de SASS (Se convervan archivos CSS antiguos aunque ignorados)  
--'Normalizacion' y retoque de estilos
+-Implementacion de SASS (Se conservan archivos CSS antiguos aunque ignorados)  
+-'Normalizacion' y retoque de estilos  
+-Reduccion de tamaño de imagenes (conserva originales aunque ignorados)
