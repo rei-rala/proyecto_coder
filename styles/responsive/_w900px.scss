@@ -2,6 +2,13 @@
   #navbar {
     position: fixed;
     width: 100%;
+    .navbar-nav {
+      margin: 0 !important;
+      .nav-link {
+        width: 100%;
+        padding: 1rem 1rem;
+      }
+    }
   }
   #inicio {
     padding-top: 4rem;
